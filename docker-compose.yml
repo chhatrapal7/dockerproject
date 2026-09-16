@@ -1,34 +1,26 @@
 version: '3.8'
 services:
   internetbanking:
-    image: trainerreyaz/ib-image:latest
+    image: chhatrapal7/image-2:latest
     ports:
-      - "81:80"
+      - "91:80"
     deploy:
       replicas: 3
     volumes:
-      - /var/lib/internetbanking
+      - /var/lib/image-2
   mobilebanking:
-    image: trainerreyaz/mb-image:latest
+    image: chhatrapal7/ib-images:latest
     ports:
-      - "82:80"
+      - "92:80"
     deploy:
       replicas: 3
     volumes:
-      - /var/lib/mobilebanking
+      - /var/lib/ib-images
   insurance:
-    image: trainerreyaz/insurance-image:latest
+    image: chhatrapal7/chhatrapal:latest
     ports:
-      - "83:80"
+      - "93:80"
     deploy:
       replicas: 3
     volumes:
-      - /var/lib/insurance
-  loan:
-    image: trainerreyaz/loans-image:latest
-    ports:
-      - "84:80"
-    deploy:
-      replicas: 3
-    volumes:
-      - /var/lib/loan
+      - /var/lib/chhatrapal
