@@ -1,26 +1,18 @@
 version: '3.8'
 services:
   internetbanking:
-    image: chhatrapal7/image-2:latest
+    image: chhatrapal7/ib-image:latest
     ports:
-      - "91:80"
+      - "51:80"
     deploy:
       replicas: 3
     volumes:
-      - /var/lib/image-2
-  mobilebanking:
-    image: chhatrapal7/ib-images:latest
+      - /var/lib/ib-image
+  internetbanking2:
+    image: chhatrapal7/ib-image:latest
     ports:
-      - "92:80"
+      - "52:80"
     deploy:
       replicas: 3
     volumes:
-      - /var/lib/ib-images
-  insurance:
-    image: chhatrapal7/chhatrapal:latest
-    ports:
-      - "93:80"
-    deploy:
-      replicas: 3
-    volumes:
-      - /var/lib/chhatrapal
+      - /var/lib/ib-image
